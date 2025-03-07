@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+
+  background: #f0f0f0;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.circular-progress {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+
+  border-radius: 50%;
+  background: conic-gradient(#a411ff 0deg, #ccc 0deg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 82%;
+  height: 82%;
+  background: #e8e8e8;
+
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circular-progress .number {
+  position: absolute;
+  font-size: 24px;
+  font-weight: 600;
+  z-index: 99;
+}

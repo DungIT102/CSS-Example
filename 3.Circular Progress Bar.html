@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to make Circular Progress Bar</title>
+    <link rel="stylesheet" href="./3.Circular Progress Bar.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="circular-progress" id="progress">
+        <div class="circle"></div>
+        <div class="number" id="data">0%</div>
+      </div>
+    </div>
+
+    <script>
+      function startProgress() {
+        const elProgress = document.getElementById('progress');
+        const elData = document.getElementById('data');
+
+        let tempInterval = null;
+        let index = 0;
+
+        tempInterval = setInterval(() => {
+          if (index >= 100) {
+            clearInterval(tempInterval);
+          } else {
+            index++;
+            elData.textContent = `${index}%`;
+            elProgress.style.background = `conic-gradient(#a411ff ${index * 3.6}deg, #ccc ${
+              index * 3.6
+            }deg)`;
+          }
+        }, 68);
+      }
+
+      startProgress();
+    </script>
+  </body>
+</html>
