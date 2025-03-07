@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #212121;
+}
+
+.menu a {
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 0.8rem 3rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+
+  color: #fff;
+  background: #333;
+  transition: 0.35s ease;
+}
+
+.menu a:hover {
+  background: #ff6ecf;
+  transform: scale(1.1);
+}
