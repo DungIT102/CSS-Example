@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #212121;
+}
+
+.gradient-text {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+
+  font-size: 2.5rem;
+  color: #e8e8e8;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.gradient-text::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: none;
+  width: 0;
+  height: 100%;
+  transition: width 0.35s;
+
+  color: transparent;
+  background: linear-gradient(to right, #ff00ff, #00ffff);
+  background-clip: text;
+}
+
+.gradient-text:hover::before {
+  display: block;
+  width: 100%;
+}
