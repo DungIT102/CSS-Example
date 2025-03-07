@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #212121;
+}
+
+h2 {
+  font-size: 2.5rem;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+
+  background-image: linear-gradient(#ff2f93, #ff2f93);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position-x: right;
+  transition: background-size 0.55s ease;
+}
+
+h2:hover {
+  background-size: 100% 100%;
+  background-position-x: left;
+}
