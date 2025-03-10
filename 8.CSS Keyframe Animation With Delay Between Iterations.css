@@ -1,0 +1,53 @@
+/* 
+    I want the animation to run for 1.6 second
+    I want the animation to delay for 2.4 seconds in between iterations
+    5 total seconds
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+}
+
+.area {
+  width: 250px;
+  height: 50px;
+  margin: 0 auto;
+
+  border: 2px solid #f06d06;
+  border-radius: 50px;
+}
+
+.mover {
+  width: 48px;
+  height: 48px;
+  background: #f06d06;
+  border-radius: 50%;
+
+  animation: move 4s infinite ease-in-out;
+}
+
+@keyframes move {
+  45%,
+  100% {
+    opacity: 0;
+    transform: translate(200px, 0);
+  }
+
+  0% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 1;
+  }
+}
