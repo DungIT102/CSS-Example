@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Poppins', sans-serif;
+  height: 100dvh;
+  background: #ff9d9dce;
+}
+
+.button-container {
+  width: 12rem;
+  min-width: 6rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+
+  resize: horizontal;
+  overflow: hidden;
+  container-type: inline-size;
+  container-name: btn;
+  transition: all 0.35s ease-in-out;
+
+  font-size: 16px;
+  color: #fff;
+  background: #212121;
+  white-space: nowrap;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.button span {
+  color: #ff2828;
+}
+
+.button i {
+  display: none;
+  color: #ff2828;
+  font-size: 16px;
+}
+
+@container btn (max-width: 7rem) {
+  .button span {
+    display: none;
+    opacity: 0;
+  }
+
+  .button i {
+    display: inline-block;
+    opacity: 1;
+  }
+}
