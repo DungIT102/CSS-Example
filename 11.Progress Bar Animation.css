@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #e8e8e8;
+}
+
+.progress {
+  position: relative;
+  width: 230px;
+  height: 50px;
+  border-radius: 8px;
+
+  overflow: hidden;
+  animation: rotateA 6s linear infinite;
+  box-shadow: 0 0 0 7px #42a5f5, inset 0 0 0 1px #42a5f5;
+}
+
+.progress::before {
+  content: '';
+  display: block;
+  height: 100%;
+  background: #42a5f5;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: loadA 6s linear infinite;
+}
+
+@keyframes rotateA {
+  0%,
+  42% {
+    transform: rotate(0deg);
+  }
+
+  48%,
+  92% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loadA {
+  0% {
+    width: 0;
+  }
+
+  40%,
+  50% {
+    width: 100%;
+  }
+
+  90%,
+  100% {
+    width: 0;
+  }
+}
