@@ -35,7 +35,7 @@ body {
   padding-left: 6px;
 
   color: #00d4fa;
-  animation: animate 4s infinite;
+  animation: animate 4s ease-in-out infinite;
 }
 
 @keyframes animate {
