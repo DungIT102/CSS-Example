@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #e8e8e8;
+}
+
+.loader {
+  display: flex;
+}
+
+.ball {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+}
+
+.ball-1 {
+  background-color: #fe2c55;
+  animation: slide-01 0.7s ease-in-out infinite;
+}
+
+.ball-2 {
+  background-color: #01f7ee;
+  animation: slide-02 0.7s ease-in-out infinite;
+}
+
+@keyframes slide-01 {
+  0%,
+  100% {
+    z-index: 1;
+    transform: translateX(0);
+  }
+
+  50% {
+    z-index: 2;
+    transform: translateX(14px);
+  }
+}
+
+@keyframes slide-02 {
+  0%,
+  100% {
+    z-index: 2;
+    transform: translateX(0);
+  }
+
+  50% {
+    z-index: 1;
+    transform: translateX(-14px);
+  }
+}
