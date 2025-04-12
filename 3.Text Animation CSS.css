@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  background: #e8e8e8;
+}
+
+.loader {
+  width: fit-content;
+  animation: ball 1s infinite alternate linear;
+  background: radial-gradient(circle closest-side, #000 94%, #0000) right/calc(200% - 1em) 100%;
+
+  font-family: monospace;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.loader::before {
+  content: 'Loading...';
+  line-height: 1em;
+
+  color: #0000;
+  background: inherit;
+  background-image: radial-gradient(circle closest-side, #fff 94%, #000);
+  background-clip: text;
+}
+
+@keyframes ball {
+  100% {
+    background-position: left;
+  }
+}
