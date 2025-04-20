@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+
+button {
+  position: relative;
+  border: 0;
+  outline: none;
+
+  color: rgb(40, 72, 94);
+  background: none;
+  cursor: pointer;
+
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hover-text {
+  position: absolute;
+  width: 0%;
+  overflow: hidden;
+  border-right: 6px solid #00c3ff;
+
+  inset: 0;
+  color: #00c3ff;
+  transition: width 0.4s ease;
+}
+
+button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 10px #00c3ff);
+}
